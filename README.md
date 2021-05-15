@@ -2,10 +2,17 @@
 
 ### Date created
 May 15, 2021
+
 ### Project Title
 Bikeshare Project
+
 ### Description
-Describe what your project is about and what it does
+The project interacts with the user to answer interesting question about bike share in 3 major cities of the US. the user will have to answer questions in order to provide statistical analysis.
+
+Modules used in this projects are as following:
+numpy
+pandas
+time
 
 ### Files used
 Include the files used
