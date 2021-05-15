@@ -209,18 +209,18 @@ def user_stats(df):
 
 
 def display_data(df):
-    view_date = input('Would like to see raw data? type Yes or No').lower()
+    view_data = input('Would like to see raw data? type Yes or No').lower()
     start_loc = 0
     end_loc = 5
-    while view_date != 'yes' and view_date != 'no':
+    while view_data != 'yes' and view_data != 'no':
         print("You need to type only 'yes' or 'no' ")
-        view_date = input('Would like to see raw data? type Yes or No').lower()
+        view_data = input('Would like to see raw data? type Yes or No').lower()
 
-    while view_date == 'yes':
+    while view_data == 'yes':
         print(df.iloc[start_loc: end_loc, :])
         start_loc = start_loc + 5
         end_loc = end_loc + 5
-        view_date = input('Do you wish to see the next 5 rows?').lower()
+        view_data = input('Do you wish to see the next 5 rows?').lower()
 
     # print('printing raw data of first 5 rows\n', df.head(5))
 
