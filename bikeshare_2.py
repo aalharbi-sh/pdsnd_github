@@ -209,6 +209,10 @@ def user_stats(df):
 
 
 def display_data(df):
+    """
+    This function will prompt end user to choose to see raw data about the selected city.
+    note that it only going to display 5 rows at a time and user can continue 
+    """
     view_date = input('Would like to see raw data? type Yes or No').lower()
     start_loc = 0
     end_loc = 5
