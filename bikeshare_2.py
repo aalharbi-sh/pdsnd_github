@@ -52,7 +52,6 @@ def get_filters():
     return city, month, day
 
 
-# print('Testing the input of get_filters function \n', get_filters())
 
 
 def load_data(city, month, day):
@@ -104,12 +103,10 @@ def load_data(city, month, day):
         # filter by day of week to create the new dataframe
         df = df[df['day_of_week'] == day.title()]
         # df = df[df['day_of_week'] == day]
-    # print('printing raw data of first 5 rows\n', df.head(5))
 
     return df
 
 
-# print('printing load_data function \n', load_data('Chicago', 'Feb', 'Sunday').head())
 
 
 def time_stats(df):
@@ -121,16 +118,9 @@ def time_stats(df):
     # display the most common month
     print('The most common month is {}'.format(df['month'].mode().to_string(index=False)))
 
-    # print('printing high level statistic ', df.describe())
-    # print('displaying the max record: \n', df.max())
-    # print('displaying the mean record: \n', df.min())
-    # print('displaying the Correlation record: \n', df.corr())
-    # print('printing the sum of user type % sum of trip dur\n', df.groupby(['User Type', 'month'])['Trip Duration'].sum())
-
     # display the most common day of week
     print('The most common day of the week is {}'.format(df['day_of_week'].mode().to_string(index=False)))
 
-    # print('The most common day of the week', df['day_of_week'].mode().rename(index={0: 'is'}))
     # display the most common start hour  hour
     # using .to_string method to hide the index
     print('The most common hour is {}'.format(df['hour'].mode().to_string(index=False)))
@@ -217,17 +207,16 @@ def display_data(df):
     view_date = input('Would like to see raw data? type Yes or No').lower()
     start_loc = 0
     end_loc = 5
-    while view_date != 'yes' and view_date != 'no':
+    while view_data != 'yes' and view_data != 'no':
         print("You need to type only 'yes' or 'no' ")
-        view_date = input('Would like to see raw data? type Yes or No').lower()
+        view_data = input('Would like to see raw data? type Yes or No').lower()
 
-    while view_date == 'yes':
+    while view_data == 'yes':
         print(df.iloc[start_loc: end_loc, :])
         start_loc = start_loc + 5
         end_loc = end_loc + 5
-        view_date = input('Do you wish to see the next 5 rows?').lower()
+        view_data = input('Do you wish to see the next 5 rows?').lower()
 
-    # print('printing raw data of first 5 rows\n', df.head(5))
 
 
 def main():
