@@ -2,6 +2,7 @@ import time
 import pandas as pd
 import numpy as np
 
+# setting the output to display as many data as possible
 pd.set_option('precision', 0)
 pd.set_option('display.max_columns', 5000)
 pd.set_option('display.max.rows', 1000)
@@ -211,7 +212,7 @@ def user_stats(df):
 def display_data(df):
     """
     This function will prompt end user to choose to see raw data about the selected city.
-    note that it only going to display 5 rows at a time and user can continue 
+    note that it only going to display 5 rows at a time and user can continue
     """
     view_date = input('Would like to see raw data? type Yes or No').lower()
     start_loc = 0
