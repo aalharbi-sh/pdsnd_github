@@ -15,7 +15,7 @@ pandas
 time
 
 ### Files used
-Include the files used
+You need to download 3 .csv files in order to successfully run the bikeshare_2.py. These 3 files representing 3 major cities New York, Chicago, Washington. 
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
